@@ -1,0 +1,1550 @@
+
+/********************************/
+/** BODY and VIEWPORT elements **/
+/********************************/
+#body
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: #404040;
+	background-color: #FFFFFF;
+	min-width: 800px;
+}
+
+#viewport
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+/**************************/
+/** Global style classes **/
+/**************************/
+a:link 
+{ 
+	text-decoration: underline;
+	outline: none;
+	font-weight:normal;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: #2A9BD1;
+}  
+
+a:visited
+{
+	text-decoration: underline;
+	outline: none;
+	font-weight:normal;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: #2A9BD1;
+}
+
+.centered
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.left-container
+{
+	float: left;
+	width: 50%;
+	
+}
+
+.right-container
+{
+	position: relative;
+	width: 50%;
+	margin-left: 50%;
+	
+}
+
+.select-label
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+	color: #1faae9;
+}
+
+.link
+{
+	text-decoration: underline;
+	outline: none;
+	font-weight:normal;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: #2A9BD1;	
+	cursor: pointer;
+}
+
+.border-radius
+{
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.horizontal-gradient-bar
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 3px;
+
+	background: #58BFED;													/** Old browsers 	**/
+	background: -moz-linear-gradient(left, #1faae9 0%, #ffffff 100%); 							/** FF3.6+ 		**/
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1faae9), color-stop(100%,#ffffff)); 		/** Chrome,Safari4+ 	**/
+	background: -webkit-linear-gradient(left, #1faae9 0%,#ffffff 100%); 							/** Chrome10+,Safari5.1+**/
+	background: -o-linear-gradient(left, #1faae9 0%,#ffffff 100%); 								/** Opera 11.10+ 	**/
+	background: -ms-linear-gradient(left, #1faae9 0%,#ffffff 100%); 							/** IE10+ 		**/
+	background: linear-gradient(to right, #1faae9 0%,#ffffff 100%); 							/** W3C 		**/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1faae9', endColorstr='#ffffff',GradientType=1 ); 	/** IE6-9		**/
+}
+
+.vertical-gradient-bar
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 3px;
+	height: 100%;
+
+	background: #58BFED;													/** Old browsers 	**/
+	background: -moz-linear-gradient(top, #1faae9 0%, #ffffff 100%);							/** FF3.6+ 		**/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1faae9), color-stop(100%,#ffffff));		/** Chrome,Safari4+ 	**/
+	background: -webkit-linear-gradient(top, #1faae9 0%,#ffffff 100%);							/** Chrome10+,Safari5.1+**/
+	background: -o-linear-gradient(top, #1faae9 0%,#ffffff 100%);								/** Opera 11.10+ 	**/
+	background: -ms-linear-gradient(top, #1faae9 0%,#ffffff 100%);								/** IE10+ 		**/
+	background: linear-gradient(to bottom, #1faae9 0%,#ffffff 100%);							/** W3C 		**/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1faae9', endColorstr='#ffffff',GradientType=0 );	/** IE6-9 		**/
+
+}
+
+.area-mask
+{
+	position: absolute;
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-height: 50px;
+	background-color: #000000;
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";	/* IE 8 */
+	filter: alpha(opacity=50);						/* IE 5-7 */
+	-moz-opacity: 0.5;							/* Netscape */
+	-khtml-opacity: 0.5;							/* Safari 1.x */
+	opacity: 0.5;								/* Good browsers */
+	z-index: 50;
+}
+
+/******************/
+/** Form styling **/
+/******************/
+input, select, textarea
+{
+	font-size: 14px;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: #404040;
+	border: 1px solid #3DBCF5;
+	background-color: #FFFFFF;
+	outline: none;
+}
+
+.input-active
+{
+	/*background-color: #F5F5F5;*/
+	background-color: #D2F0FD;
+	border: 1px solid #F5B13D;
+}
+
+select:focus
+{
+	outline: none;
+}
+
+.admin-form-container
+{
+	position: relative;
+	margin: 0 auto 0 auto;
+	padding: 0;
+	text-align: center;
+}
+
+.admin-form-bar
+{
+	position: relative;
+	clear: both;
+	margin: 20px 0 10px 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #3DBCF5;
+}
+
+.admin-form-container #entry_title
+{
+	padding: 0 0 0 3px;
+	font-weight: bold;
+}
+
+.admin-form-container select[multiple]
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.admin-form-container #entry-browser-table
+{
+	position: relative;
+	margin: 0 0 30px 0;
+	padding: 0;
+	width: 100%;	
+}
+
+.admin-form-container table
+{
+	position: relative;
+	margin: 10px auto 0 auto;
+	padding: 0;
+}
+
+.admin-form-container table td div.entry-title
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	max-width: 550px;
+	text-align: left;
+	font-weight: bold;
+	color: #0072A6;
+	cursor: pointer;
+}
+
+.admin-form-container table td div.entry-title:hover
+{
+	color: #3DBCF5;
+}
+
+.admin-form-container table td div.entry-text
+{
+	position: relative;
+	display: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+.admin-form-container .entry-confirmation
+{
+	position: relative;
+	margin: 50px 0 0 0;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #1faae9; 	
+}
+
+/***************************/
+/** Submit Button styling **/
+/***************************/
+.submit-button-1
+{
+	position: relative;
+	display: inline-block;
+	margin: auto;
+	padding: 0;
+	text-align: center;
+	vertical-align: bottom;
+	width: 100px;
+	background-color: #F5B13D; /** Orange **/ /** Alt: #FFA500 **/
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Calibri, Tahoma, sans-serif;
+	border: none;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	outline: none;
+	cursor: pointer;	
+}
+
+.submit-button-1:hover
+{
+	background-color: #DE7B02;
+	color: #FFFFFF;
+}
+
+.submit-button-1[disabled]
+{
+	background-color: #FDECCF;
+	color: #FFFFFF;
+	cursor: auto;
+}
+
+.submit-button-1[disabled]:hover
+{
+	background-color: #FDECCF;
+	color: #FFFFFF;
+	cursor: auto;
+}
+
+/*********************/
+/** Top Bar styling **/
+/*********************/
+#top-bar-placeholder
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 70px;
+}
+
+#top-bar
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 800px;
+	height: 70px;
+	margin: 0;
+	padding: 0;
+	z-index: 999;
+
+	background: #58BFED;													/** Old browsers 	**/
+	background: -moz-linear-gradient(top, #1faae9 0%, #99d9f5 100%);							/** FF3.6+ 		**/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1faae9), color-stop(100%,#99d9f5));		/** Chrome,Safari4+ 	**/
+	background: -webkit-linear-gradient(top, #1faae9 0%,#99d9f5 100%);							/** Chrome10+,Safari5.1+**/
+	background: -o-linear-gradient(top, #1faae9 0%,#99d9f5 100%);								/** Opera 11.10+ 	**/
+	background: -ms-linear-gradient(top, #1faae9 0%,#99d9f5 100%);								/** IE10+ 		**/
+	background: linear-gradient(to bottom, #1faae9 0%,#99d9f5 100%);							/** W3C 		**/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1faae9', endColorstr='#99d9f5',GradientType=0 ); 	/** IE6-9 		**/
+}
+
+#top-bar-left-image
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 150px;
+	height: 30px;
+	text-align: center;
+}
+
+#top-bar-left-image img
+{
+	position: relative;
+	margin: 0;
+	padding: 3px 3px 3px 8px;
+	width: 125px;
+	height: 28px;
+}
+
+#top-bar-right-image
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 300px;
+	height: 70px;
+	text-align: center;
+}
+
+#top-bar-right-image img
+{
+	position: relative;
+	margin: 0;
+	padding: 3px;
+	width: 275px;
+	height: 69px;
+}
+
+
+/**********************/
+/** Top Menu styling **/
+/**********************/
+#top-menu
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.top-menu-item
+{
+	position: relative;
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0;
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+
+	zoom: 1; /* gives the object layout */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+	-khtml-opacity: 0.4;
+	opacity: 0.4;
+
+}
+
+.top-menu-item-selected
+{
+	position: relative;
+	float: left;
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 0;
+	width: 100px;
+	height: 20px;
+	text-align: center;
+	background-color: #FFFFFF;
+	
+	zoom: 1; /* gives the object layout */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+
+.top-menu-item a
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	line-height: 20px;
+	color: inherit;
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+
+}
+
+.top-menu-item-selected a
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	line-height: 20px;
+	color: inherit;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+
+}
+
+.top-menu-item a:hover
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #D7EEF7;
+	color: inherit;
+	font-weight: normal;
+	text-decoration: none;
+
+}
+
+/***************************/
+/** Loading Image styling **/
+/***************************/
+#hidden-loading-container, #hidden-selections-message
+{
+	display: none;
+}
+
+#loading-img
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 400px;
+}
+
+/*****************************************************/
+/** Top-level Drop Down Menu individual positioning **/
+/*****************************************************/
+#favorites-menu
+{
+	position: absolute;
+	top: 70px;
+	left: 210px;
+}
+
+#export-menu
+{
+	position: absolute;
+	top: 70px;
+	left: 314px;
+}
+
+/**************************************/
+/** Top-level Drop Down Menu styling **/
+/**************************************/
+.top-drop-menu
+{
+	display: none;
+	margin: 0;
+	padding: 0;
+	background: #FFFFFF;
+	z-index: 1001;
+}
+
+.top-drop-menu ul
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0 solid #1faae9;
+	border-width: 0 1px 1px 1px;
+}
+
+.top-drop-menu li
+{
+	position: relative;
+	margin: 0;
+	padding: 3px;
+	border: 0 solid #1faae9;
+	border-width: 0;
+	color: #404040;
+}
+
+.top-drop-menu a
+{
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0 5px 0 0;
+	width: 100%;
+	height: 100%;
+	font-size: 14px;
+	font-family: Calibri, Tahoma, sans-serif;
+	color: inherit;
+	text-decoration: none;
+}
+
+.top-drop-menu li:hover
+{
+	color: #FFFFFF;
+	background: #1faae9;
+}
+
+/********************/
+/** Alerts styling **/
+/********************/
+#user-messages-placeholder
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 25px;
+}
+
+#user-messages
+{
+	position: fixed;
+	top: 70px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width: 800px;
+	background-color: #FFFFFF;
+	z-index: 999;
+}
+
+.user-alert
+{
+	position: relative;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: left;
+	background-color: #FFFFFF;
+}
+
+
+.user-alert .alert-message
+{
+	position: relative;
+	margin: 0 20px 0 0;
+	padding: 0;
+	line-height: 20px;
+	height: 20px;	  /**													       **/
+	overflow: hidden; /** These 2 lines keep long alerts from creating more than 1 line and affecting the tableSorter stickyHeader **/
+	background-color: #FFFFFF;
+}
+
+.user-alert .alert-message-text
+{
+	position: relative;
+	margin: 0 0 0 0;
+	padding: 0 3px 0 3px;
+	color: #FFFFFF;
+	font-size: 12px;
+	text-align: left;
+
+}
+
+.user-alert .alert-icon
+{
+	position: relative;
+	float: right;
+	margin: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.user-alert .alert-icon .alert-icon-x
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.user-alert .alert-icon .alert-icon-img
+{
+	display: none;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 20px;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+
+.user-alert .alert-icon .alert-icon-img img
+{
+	position: relative;
+	margin: 0;
+	padding: 3px 3px 0 0;
+	width: 17px;
+	height: 17px;
+}
+
+/** Application alerts colors **/
+.application-alert
+{
+	background-color: #1F81AD;	
+}
+
+.alert-icon.application-alert:hover
+{
+	background-color: #68B6D9;
+}
+
+/** Page alerts colors **/
+.page-alert
+{
+	background-color: #FFA200;	
+}
+
+.alert-icon.page-alert:hover
+{
+	background-color: #68B6D9;
+}
+
+/****************************/
+/** Content Header styling **/
+/****************************/
+#content-header-placeholder
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/*height: 50px;*/
+}
+
+#content-header
+{
+	position: fixed;
+	top: 90px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-width: 800px;
+	min-height: 50px;
+	background-color: #FFFFFF;
+	z-index: 998;
+}
+
+#content-header-top-row
+{
+	position: relative;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	
+}
+
+#breadcrumbs
+{
+	position: relative;
+	float: left;
+	margin: 0;
+	padding: 4px 0 4px 10px;
+	z-index: 997;
+}
+
+#user-welcome
+{
+	position: relative;
+	margin: 0;
+	padding: 4px 10px 4px 0;
+	text-align: right;
+	color: #1FAAE9;
+	font-weight: bold;
+	z-index: 996;
+}
+
+#content-header-underline
+{
+	position: relative;
+	margin: 0 0 0 20px;
+	padding: 0;
+	width: 97%;
+}
+
+/***************************/
+/** Content Title styling **/
+/***************************/
+#content-title
+{
+	position: relative;
+	clear: both;
+	margin: 5px 0 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+#content-title span
+{
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 20px;
+	font: 30px bold Calibri, Tahoma, sans-serif;
+	color: #1faae9;
+}
+
+#content-title img
+{
+	position: relative;
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+/*****************************/
+/** Content Filters styling **/
+/*****************************/
+#content-filters
+{
+	position: relative;
+	clear: both;
+	margin: 0 0 0 10px;
+	padding: 4px 0 4px 0;
+}
+
+#content-filters div
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	zoom: 1;
+	*display: inline;
+}
+
+#content-filters .drop-down-filter
+{
+	position: relative;
+	margin: 0;
+	padding: 0 5px 0 5px;
+	text-align: left;
+}
+
+
+/************************************/
+/** Content Customize menu styling **/
+/************************************/
+#content-customize, #content-customize-wait, #dashboard-customize-menu
+{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	padding: 0 50px 0 0;
+	font-size: 12px;
+}
+
+.dashboard-customize-menu
+{
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 10px;
+	font-size: 12px;
+}
+
+.dashboard-customize-menu a
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+
+#content-customize-wait a
+{
+	color: #808080;
+	text-decoration: none;
+	font-style: italic;
+	cursor: default;
+}
+
+.content-customize-highlight a
+{
+	color: orange;
+	font-weight: bold;
+}
+
+/*********************/
+/** CONTENT element **/
+/*********************/
+#content
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#no-content, #filter-update-message
+{
+	position: relative;
+	margin: 0;
+	madding: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 250px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+/*********************************/
+/** Dashboard Container styling **/
+/*********************************/
+#dashboard-container
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 400px;
+}
+
+#dashboard-wrapper
+{
+	position: relative;
+	margin: 0 0 40px 0;
+	padding: 0;
+	width: 98%;
+}
+
+/*************************************/
+/** Dashboard Customization styling **/
+/*************************************/
+.draggable-ready
+{
+	border: 3px dashed #A4A8AE;
+	cursor: move;
+}
+
+.draggable-remove
+{
+	border: 3px dashed #A4A8AE;
+	cursor: pointer;
+}
+
+.draggable-remove:hover
+{
+	border: 3px dashed #FF0040;
+}
+
+
+/*************************************/
+/** Reports Navigation Page styling **/
+/*************************************/
+#reports-navigation
+{
+	position: relative;
+	margin: 10px 0 0 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#reports-account-list
+{
+	position: relative;
+	float: left;
+	/*display: inline-block;*/
+	margin: 0 0 0 20px;
+	padding: 0;
+	vertical-align: top;
+}
+
+.reports-master-account
+{
+	position: relative;
+	margin: 0;
+	padding: 0 10px 0 3px;
+	/*color: #247FAB;*/
+	color: #2A9BD1;
+	cursor: pointer;
+	
+}
+
+.reports-master-account:hover, .reports-master-account-selected
+{
+	position: relative;
+	margin: 0;
+	padding: 0 10px 0 3px;
+	color: #FFFFFF;
+	background-color: #1faae9;
+}
+
+#reports-list
+{
+	position: relative;
+	/**float: left;**/
+	/**display: inline-block;**/
+	/** Block formatting context applied by floating #report-accounts-list and overflow: hidden here **/
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	max-width: 85%;
+}
+
+#report-list-content
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
+}
+
+.report-group
+{
+	display: inline-block;
+	position: relative;
+	margin: 0 40px 15px 40px;
+	padding: 0;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	*padding-left: 20px;
+}
+
+.report-group-title
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.report-sub-group
+{
+	display: inline-block;
+	position: relative;
+	margin: 0 20px 20px 10px;
+	padding: 0;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+	*padding-left: 20px;
+}
+
+.report-sub-group-title
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+/****************************/
+/** web Part Setup styling **/
+/****************************/
+.web-part-setup-image
+{
+	float: left;
+	width: 350px;
+	height: 470px;
+	text-align: center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color: #1F81AD;
+	
+}
+
+.web-part-image-helper
+{
+	line-height: 460px;	
+}
+
+.web-part-setup-image img
+{
+	margin: auto 0 auto 0;
+	max-width: 345px;
+	max-height: 460px;
+	vertical-align: middle;
+}
+
+.web-part-setup-filter
+{
+	position: relative;
+	width: 350px;
+	height: 410px;
+	margin-left: 360px;
+	margin-bottom: 10px;
+	text-align: center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color: #1F81AD;
+	color: #FFFFFF;
+}
+
+.web-part-setup-button
+{
+	position: relative;
+	width: 350px;
+	height: 50px;
+	margin-left: 360px;
+	line-height: 50px;
+}
+
+/***********************/
+/** Favorites styling **/
+/***********************/
+#manage-favorites-item
+{
+
+	/*background-image: url(/SAS/images/2.0/Icons/favorites-icon-1.png);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: 95% 50%;*/
+
+	position: relative;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	
+}
+
+#manage-favorites-item a
+{
+	font-weight: bold;	
+}
+
+
+/********************************/
+/** Web Part Container styling **/
+/********************************/
+.web-part-container
+{
+	display: inline-block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.web-part-title
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.web-part-filter-text
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+.web-part-content
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+/***************************/
+/** Content Table styling **/
+/***************************/
+.content-table
+{
+	position: relative;
+	margin-bottom: 20px;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.content-table-title
+{
+	position: relative;
+	margin-bottom: 15px;
+	padding: 0;
+	color: #505050;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.content-table thead
+{
+	margin: 0;
+	padding: 0;
+	color: #FFFFFF;
+	border: 0;	
+}
+
+.content-table thead th
+{
+	background-color: #3DBCF5;
+	padding: 5px 20px 5px 20px;
+	border-right: 1px solid #FFFFFF;
+	text-align: center;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.content-table thead th:first-child
+{
+	border-left: 1px solid #3DBCF5;
+}
+
+.content-table thead th:last-child
+{
+	border-left: 0;
+	border-right: 1px solid #3DBCF5;
+}
+
+.content-table thead th:hover
+{
+	background: #8CDBFF;
+}
+
+.table-head-bottom-margin, .table-body-bottom-margin
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	font-size: 5px;
+	height: 7px;
+	border: 0;
+}
+
+/** Table body styling **/
+.content-table tbody.table-content
+{
+	margin: 10px 0 10px 0;
+	border: 1px solid #1faae9;
+}
+
+/** Body-only row styling **/
+.content-table tbody tr:nth-child(odd)
+{
+	background-color: #FFFFFF;
+}
+
+.content-table tbody tr:nth-child(even)
+{
+	/*background-color: #D9F3FF;*/
+	background-color: #EBF9FF;
+}
+
+/** Body and Footer cell styling **/
+.content-table tbody.table-content td, .content-table tfoot td
+{
+	padding-left: 8px;
+	padding-right: 8px;
+	border-right: 1px solid #E9E9E9;
+}
+
+/** Body-only cell styling **/
+.content-table tbody.table-content td
+{
+	border-bottom: 1px solid #E9E9E9;
+}
+
+/** Footer-only cell styling **/
+.content-table tfoot td
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;	
+}
+
+/** Remove border-right from cells in last column **/
+.content-table tbody.table-content td:last-child, .content-table tfoot td:last-child
+{
+	border-right: none;
+}
+
+/** Remove border-bottom from cells in last row **/
+.content-table tbody.table-content tr:last-child td
+{
+	border-bottom: none;
+}
+
+.content-table tfoot
+{
+	margin: 0;
+	padding: 0;
+	border: 1px solid #1faae9;
+	font-weight: bold;
+	
+}
+
+/** Firefox border-collapse bug fix **/
+@-moz-document url-prefix() {
+
+	.content-table thead th:first-child
+	{
+		border-left: 0;
+	}
+
+	.content-table thead th:last-child
+	{
+		border-left: 0;
+		border-right: 0;
+	}
+
+	.content-table tbody.table-content, .content-table tfoot
+	{
+		border-top: 2px solid #1faae9;
+	}	
+}
+
+/** Row Limit Exceeded message cell **/
+.content-table td.row-limit-message
+{
+	max-width: 100px;
+	text-align: center;
+	word-wrap: break-word;
+	font-style: italic;
+	background-color: #3DBCF5;
+	color: #FFFFFF;	
+}
+
+/*************************/
+/** Tablesorter styling **/
+/*************************/
+.content-table th.tablesorter-headerAsc {
+	background-image: url(/SAS/images/2.0/Arrows/white-desc.gif);
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+}
+
+.content-table th.tablesorter-headerAsc:hover {
+	background-image: url(/SAS/images/2.0/Arrows/white-desc.gif);
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+}
+
+.content-table th.tablesorter-headerDesc {
+	background-image: url(/SAS/images/2.0/Arrows/white-asc.gif);
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+}
+
+.content-table th.tablesorter-headerDesc:hover {
+	background-image: url(/SAS/images/2.0/Arrows/white-asc.gif);
+	background-repeat: no-repeat;
+	background-position: 97% 50%;
+}
+
+/************************/
+/** Bottom Bar styling **/
+/************************/
+#bottom-bar-placeholder
+{
+	position: relative;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 35px;
+}
+
+#bottom-bar
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+	z-index: 999;
+	text-align: center;
+	background: #58BFED;													/** Old browsers 	**/
+	background: -moz-linear-gradient(top, #1faae9 0%, #99d9f5 100%);							/** FF3.6+ 		**/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1faae9), color-stop(100%,#99d9f5));		/** Chrome,Safari4+ 	**/
+	background: -webkit-linear-gradient(top, #1faae9 0%,#99d9f5 100%);							/** Chrome10+,Safari5.1+**/
+	background: -o-linear-gradient(top, #1faae9 0%,#99d9f5 100%);								/** Opera 11.10+ 	**/
+	background: -ms-linear-gradient(top, #1faae9 0%,#99d9f5 100%);								/** IE10+ 		**/
+	background: linear-gradient(to bottom, #1faae9 0%,#99d9f5 100%);							/** W3C 		**/
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1faae9', endColorstr='#99d9f5',GradientType=0 ); 	/** IE6-9 		**/
+}
+
+#bottom-bar-copyright
+{
+	position: relative;
+	line-height: 30px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-family: Calibri, Tahoma, sans-serif;
+}
+
+/***********************/
+/** Report Help Admin **/
+/***********************/
+#help-admin-form-container #entry_title
+{
+	width: 375px;
+}
+
+#help-admin-form-container #available, #help-admin-form-container #selected
+{
+	width: 450px;
+}
+
+#help-admin-form-container #updated-container
+{
+	margin: 5px auto 15px auto;
+	width: 450px;
+	text-align: right;
+}
+
+#help-admin-form-container #updated-container #sort-container
+{
+	float: left;
+}
+
+#help-admin-form-container #entry_text
+{
+	padding: 3px;
+	width: 450px;
+	height: 312px;
+}
+
+#help-admin-form-container #preview
+{
+	position: absolute;
+	right: 20px;
+}
+
+#help-admin-form-container table
+{
+	min-width: 800px;	
+}
+
+#help-admin-form-container table td div.entry-text
+{
+	max-width: 550px;	
+}
+
+/**************************************/
+/** Report Help window modifications **/
+/**************************************/
+#body.help
+{
+	min-width: 0;
+	max-width: 550px;
+}
+
+#top-bar.help, #top-bar-placeholder.help
+{
+	min-width: 0;
+	max-width: 100%;
+	height: 40px;
+}
+
+#top-bar-left-image.help
+{
+	text-align: left;
+	padding: 3px 0 0 0;
+	
+}
+
+#top-bar-left-image.help img
+{
+	width: 63px;
+	
+}
+
+#top-bar-right-image.help
+{
+	height: 38px;
+	text-align: right;
+	padding: 0 10px 0 0;
+	
+}
+
+#top-bar-right-image.help img
+{
+	width: 140px;
+	height: 35px;
+}
+
+#content-header.help
+{
+	top: 40px;
+	min-width: 0;
+	max-width: 550px;
+	min-height: 25px;
+}
+
+#content-title.help span
+{
+	font-size: 20px;
+}
+
+#content-header-underline.help
+{
+	margin: 0 5px 0 5px;
+	height: 1px;
+}
+
+#content-header-placeholder.help
+{
+	min-height: 25px;
+}
+
+#content.help > div:nth-child(odd)
+{
+	background-color: #FFFFFF;
+}
+
+#content.help > div:nth-child(even)
+{
+	background-color: #F9F9F9;
+}
+
+/*************************/
+/** Report Help styling **/
+/*************************/
+.help-entry
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	/*border-bottom: 1px solid #F1F1F1;*/
+}
+
+.help-title
+{
+	position: relative;
+	margin: 0;
+	padding: 5px;
+	width: 97%;
+	font-size: 20px;
+	font-family: Calibri, Tahoma, sans-serif;
+	font-weight: bold;
+	color: #0B9ADA;
+}
+
+.help-text
+{
+	position: relative;
+	margin: 0;
+	padding: 5px;
+	width: 97%;
+	font-size: 14px;
+	font-family: Calibri, Tahoma, sans-serif;
+	font-weight: normal;
+	color: #000000;
+}
+
+#no-help-entries
+{
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 150px;
+	font-size: 18px;
+	font-family: Calibri, Tahoma, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+	color: #000000;
+}
+
+

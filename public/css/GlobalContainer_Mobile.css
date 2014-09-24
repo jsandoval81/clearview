@@ -1,0 +1,70 @@
+
+
+/******************************/
+/** iPhone 2G-4S (Landscape) **/
+/******************************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape)
+{
+	#reports-list
+	{
+		max-width: 70%;
+	}
+}
+
+/*****************************/
+/** iPhone 2G-4S (Portrait) **/
+/*****************************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait)
+{
+	#reports-list
+	{
+		max-width: 30%;
+	}
+}
+
+/**************************/
+/** iPhone 5 (Landscape) **/
+/**************************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : landscape)
+{
+	#reports-list
+	{
+		max-width: 70%;
+	}
+
+}
+
+/*************************/
+/** iPhone 5 (Portrait) **/
+/*************************/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (orientation : portrait)
+{
+	#reports-list
+	{
+		max-width: 40%;
+	}
+
+}
+
+/**********************/
+/** iPad (Landscape) **/
+/**********************/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)
+{
+	#reports-list
+	{
+		max-width: 75%;
+	}
+}
+
+/*********************/
+/** iPad (Portrait) **/
+/*********************/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+{
+	#reports-list
+	{
+		max-width: 50%;
+	}
+}
+
